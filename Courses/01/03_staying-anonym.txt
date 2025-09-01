@@ -1,0 +1,39 @@
+*nano /etc/proxychains4.conf
+
+enable: dynamic_chain; proxy_dns
+
+disable: strict_chain
+
+scroll to the botton
+
+add:
+
+*socks5 127.0.0.1 9050
+
+exit
+
+#then type
+
+*service tor start
+
+*proxychains firefox www.duckduckgo.com     #or any other browser but avoid doing as root
+
+#it can act up some times
+
+so u can type
+*service tor restart
+
+# u can also use:
+
+proxychains nmap 
+
+#search: free socks5 proxies
+
+nano /etc/proxychains4.conf
+
+#paste the ip u chose, version (socks5) and its port
+
+u can use as many as u want 
+
+to use it u gotta close the browser
+

@@ -1,0 +1,10 @@
+To access dark web
+
+*apt-get install tor -y
+
+#add a new user
+*adduser user_nme
+create a password and u can just press enter to skip all the following stuff
+
+Download tor browser
+

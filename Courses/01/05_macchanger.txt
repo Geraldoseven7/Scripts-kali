@@ -1,0 +1,18 @@
+ifconfig eth0
+ifconfg eth0 | grep HWaddr
+
+*macchanger --help
+
+*macchanger -s eth0
+
+#to change it ocasionally
+
+*macchanger -r eth0
+
+#to change it permanantelly in order remain even after rebooting
+
+*crontab --help
+
+*crontab -e
+
+#it is gonna open an text editor

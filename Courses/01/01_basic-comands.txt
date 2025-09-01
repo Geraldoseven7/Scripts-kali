@@ -1,0 +1,15 @@
+echo "I am alive" > testing.txt
+
+mv testing.txt test #used to rename
+
+touch file1 file2 file3
+
+chown root:root file_name #used to change ownership to root
+
+
+
+
+
+
+
+

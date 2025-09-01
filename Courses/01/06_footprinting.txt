@@ -1,0 +1,23 @@
+nmap site.com
+whois site.com/ip
+nslooup site.com/ip
+
+#doing this u can actually think that the ip is wrong because it is gnna appear from the last to the first
+
+nmap -oG - 192.168.1.0-255 -p 22 -vv > /home/scan.txt
+
+ls | grep scan.txt
+
+cat scan.txt | grep Up
+
+cat scan.txt | grep Up | awk -F " " '{print $2}'
+
+cat scan.txt | grep Up | awk -F " " '{print $2}' > scan2.txt
+
+nmap -iL scan2.txt -vv
+
+%External nmap resources%
+
+curl ipinfo.io/ip
+
+go to nmap.org
